@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier-check": "prettier . --check",
-    "prettier-write": "prettier . --write"
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.2.3",
@@ -23,9 +22,14 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
